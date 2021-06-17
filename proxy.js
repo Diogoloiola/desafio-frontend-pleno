@@ -19,6 +19,17 @@ app.get('/chart/tracks', createProxyMiddleware({
     changeOrigin: true,
 }));
 
+app.get('/chart/0/podcasts', createProxyMiddleware({
+    target: API_SERVICE_URL,
+    changeOrigin: true,
+}));
+
+app.get('/chart/0/albums', createProxyMiddleware({
+    target: API_SERVICE_URL,
+    changeOrigin: true,
+}));
+
+
 app.get('/search', createProxyMiddleware({
     target: API_SERVICE_URL,
     changeOrigin: true,
