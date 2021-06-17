@@ -57,18 +57,32 @@
                         </div>
                         <div class="mt-4">
                             <div class="mt-3">
-                                <h1 class="title-card">Albuns</h1>
-                                <div class="cards" id="albuns"></div>
+                                <h1 class="title-card">Álbuns mais ouvidos</h1>
+                                <div class="cards mt-4" id="albuns"></div>
                             </div>
                         </div>
                         <div class="mt-4">
                             <div>
                                 <h1 class="title-card">Top 5 músicas</h1>
-                                <div class="cards" id="playlists"></div>
+                                <div id="tracks" class="mt-4">
+
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
+        <div class="control-player">
+            <audio autoplay="" src="http://rfmbrasil.servemp3.com:8000/uespi.ogg" id="audio-radio"></audio>
+            <div class="d-flex justify-content-around">
+                <span style="font-size: 3em; color: #FFA07A" id="play-radio">
+                <i class="far fa-play-circle"></i>
+              </span>
+                <span style="font-size: 3em" id="pause-radio">
+                <i class="far fa-pause-circle"></i>
+              </span>
+                <input type="range" min="0" max="100" value="50" class="slider" id="volume-player">
             </div>
         </div>
     </main>
