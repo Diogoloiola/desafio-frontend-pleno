@@ -39,6 +39,7 @@ body::-webkit-scrollbar {
 .left-side {
     width: 16.5%;
     height: 100%;
+    position: fixed;
     border-right: 1px solid #dfdfe0;
 }
 
@@ -88,6 +89,7 @@ body::-webkit-scrollbar {
 
 .right-side {
     width: 83.5%;
+    margin-left: auto;
 }
 
 .search {
