@@ -108,3 +108,15 @@ body::-webkit-scrollbar {
 .title-card {
     font-size: 22px;
 }
+
+.cards {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.info {
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+}

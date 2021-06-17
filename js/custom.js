@@ -1,14 +1,13 @@
-$( document ).ready(function() {
-  console.log('⚡ CustomJS Started');
+import { app } from './app.js'
 
-  // You Code Javascript
-  // fetch().then...
+$(document).ready(function() {
+    // app.getData('http://localhost:3333/chart/tracks')
 });
 
 function searchForTracks() {
-  // You Code Javascript
+    // You Code Javascript
 }
 
 function goBackInitialTracks() {
-  // You Code Javascript
+    // You Code Javascript
 }
