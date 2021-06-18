@@ -97,15 +97,17 @@ let card = {
                 obj[i].title,
                 secondsToMinutes(obj[i].duration),
                 obj[i].artist.name,
-                obj[i].album.title
+                obj[i].album.title,
+                obj[i].preview
             )
 
+
             div.classList.add('track')
+            div.appendChild(dataDiv[4])
             div.appendChild(dataDiv[0])
             div.appendChild(dataDiv[3])
             div.appendChild(dataDiv[2])
             div.appendChild(dataDiv[1])
-
             container.appendChild(div)
 
         }

@@ -1,10 +1,17 @@
 let list = {
-    createTrack(title, duration, name, album) {
+    createTrack(title, duration, name, album, preview) {
         let titleDiv = document.createElement('div')
         let durationDiv = document.createElement('div')
         let nameDiv = document.createElement('div')
         let albumDiv = document.createElement('div')
+        let span = document.createElement('span')
+        let icon = document.createElement('i')
 
+
+        icon.classList.add('far')
+        icon.classList.add('fa-play-circle')
+        span.appendChild(icon)
+        span.setAttribute('url-music', preview)
 
         titleDiv.innerHTML = title
         durationDiv.innerHTML = duration
@@ -18,7 +25,7 @@ let list = {
         albumDiv.classList.add('config-track')
 
 
-        return [titleDiv, durationDiv, nameDiv, albumDiv]
+        return [titleDiv, durationDiv, nameDiv, albumDiv, span]
 
     }
 }
