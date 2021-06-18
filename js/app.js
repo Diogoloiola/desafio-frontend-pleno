@@ -35,6 +35,10 @@ let app = {
 
         volume.addEventListener('change', () => player.volumePlayer())
 
+        let btnMainPlay = document.querySelector('#play-radio')
+
+        btnMainPlay.addEventListener('click', () => player.playerTwo())
+
         this.getData('http://localhost:3333/chart/tracks')
     }
 }
