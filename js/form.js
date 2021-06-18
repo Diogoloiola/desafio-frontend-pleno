@@ -3,6 +3,7 @@ import { card } from './card.js'
 let form = {
     main: document.querySelector('#main'),
     secondary: document.querySelector('#secondary'),
+    flag: false,
     iconSearch() {
         let search = document.querySelector('.form-search')
         search.focus()
@@ -14,6 +15,7 @@ let form = {
             return;
         }
         this.searchArtist(input.value)
+        this.flag = true
     },
     searchArtist(value) {
         const url = `http://localhost:3333/search?q=artist:"${value}"`
@@ -65,6 +67,16 @@ let form = {
         });
     },
     resetForm() {
+        if (this.flag) {
+            this.main.classList.remove('d-none')
+            this.secondary.classList.add('d-none')
+            this.flag = false
+            const containerTracks = document.querySelector('#secondary-tracks')
+            const containerAlbuns = document.querySelector('#secondary-albuns')
+
+            containerTracks.classList.add('d-none')
+            containerAlbuns.classList.add('d-none')
+        }
 
     }
 }
