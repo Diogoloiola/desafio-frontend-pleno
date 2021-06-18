@@ -1,5 +1,6 @@
 import { card } from './card.js'
 import { form } from './form.js'
+import { player } from './player.js'
 
 let app = {
     getData(url) {
@@ -29,6 +30,10 @@ let app = {
 
         let btnHome = document.querySelector('#home-icon')
         btnHome.addEventListener('click', () => form.resetForm())
+
+        let volume = document.querySelector('#volume-player')
+
+        volume.addEventListener('change', () => player.volumePlayer())
 
         this.getData('http://localhost:3333/chart/tracks')
     }

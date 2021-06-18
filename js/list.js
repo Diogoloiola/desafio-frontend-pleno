@@ -1,3 +1,5 @@
+import { player } from './player.js'
+
 let list = {
     createTrack(title, duration, name, album, preview) {
         let titleDiv = document.createElement('div')
@@ -11,7 +13,8 @@ let list = {
         icon.classList.add('far')
         icon.classList.add('fa-play-circle')
         span.appendChild(icon)
-        span.setAttribute('url-music', preview)
+
+        span.addEventListener('click', () => player.play(preview, icon))
 
         titleDiv.innerHTML = title
         durationDiv.innerHTML = duration
