@@ -200,3 +200,34 @@ body::-webkit-scrollbar {
         transform: rotate(1turn);
     }
 }
+
+.config-icon-player {
+    font-size: 1.5em;
+}
+
+.config-icon-player:nth-child(1),
+.config-icon-player:nth-child(3) {
+    position: relative;
+    top: 16px;
+}
+
+.config-icon-player:nth-child(2) {
+    font-size: 2.8em;
+    position: relative;
+}
+
+.config-icon-player:hover {
+    cursor: pointer;
+}
+
+.controls-player {
+    width: 10%;
+    display: flex;
+    justify-content: space-around;
+    margin: auto;
+}
+
+.volume {
+    position: absolute;
+    right: 40px;
+}

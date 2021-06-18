@@ -100,14 +100,25 @@
         </div>
         <div class="control-player">
             <audio autoplay="" src="" id="audio-radio"></audio>
-            <div class="d-flex justify-content-around">
-                <span style="font-size: 3em; color: #FFA07A" id="play-radio">
-                <i class="far fa-play-circle"></i>
-              </span>
-                <span style="font-size: 3em" id="pause-radio">
-                <i class="far fa-pause-circle"></i>
-              </span>
-                <input type="range" min="0" max="100" value="50" class="slider" id="volume-player">
+            <div class="d-flex justify-content-around align-items-center h-100 p-relative">
+                <div class="controls-player">
+                    <span class="config-icon-player">
+                        <i class="fas fa-backward"></i>
+                        </span>
+                    <span class="config-icon-player" id="play-radio">
+                        <i class="far fa-play-circle"></i>
+                        </span>
+                    <!-- <span style="font-size: 3em" id="pause-radio">
+                    <i class="far fa-pause-circle"></i>
+                  </span> -->
+                    <span class="config-icon-player">
+                    <i class="fas fa-forward"></i>
+                  </span>
+                </div>
+
+                <div class="volume">
+                    <input type="range" min="0" max="100" value="50" class="slider" id="volume-player">
+                </div>
             </div>
         </div>
     </main>
