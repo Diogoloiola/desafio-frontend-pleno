@@ -1,4 +1,6 @@
 import { card } from './card.js'
+import { form } from './form.js'
+
 let app = {
     getData(url) {
         let loadDiv = document.querySelector('.container-load')
@@ -17,6 +19,18 @@ let app = {
                 main.classList.remove('d-none')
             }
         });
+    },
+    loadApplication() {
+        let btnIconSearch = document.querySelector('#search-icon')
+        btnIconSearch.addEventListener('click', () => form.iconSearch())
+
+        let btnSearch = document.querySelector('.icon-form')
+        btnSearch.addEventListener('click', () => form.search())
+
+        let btnHome = document.querySelector('#home-icon')
+        btnHome.addEventListener('click', () => form.resetForm())
+
+        this.getData('http://localhost:3333/chart/tracks')
     }
 }
 
