@@ -24,6 +24,8 @@ let card = {
 
         let container = document.querySelector(idContainer)
 
+        container.innerHTML = ''
+
         for (let i = 0; i < 5; i++) {
             let div = document.createElement('div')
             let imgInfo = document.createElement('img')
@@ -41,8 +43,8 @@ let card = {
     },
     createCardAlbum(obj, id = null) {
         const idContainer = id ? id : '#albuns'
-
         let container = document.querySelector(idContainer)
+        container.innerHTML = ''
         for (let i = 0; i < 5; i++) {
             let div = document.createElement('div')
             let imgInfo = document.createElement('img')
@@ -50,8 +52,11 @@ let card = {
             div.classList.add('info')
             imgInfo.classList.add('w-100')
 
-            imgInfo.src = obj[i].cover_medium
-
+            if (id != null) {
+                imgInfo.src = obj[i].album.cover_medium
+            } else {
+                imgInfo.src = obj[i].cover_medium
+            }
             div.appendChild(imgInfo)
             container.appendChild(div)
 
@@ -62,6 +67,7 @@ let card = {
 
         let container = document.querySelector(idContainer)
 
+        container.innerHTML = ''
 
         for (let i = 0; i < 5; i++) {
             let div = document.createElement('div')
